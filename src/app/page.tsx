@@ -19,6 +19,7 @@ import { useSuperUserQuery } from "@/redux/features/SuperUser";
 import { ProgressBar } from 'primereact/progressbar';
 import profile from '../../assets/pictures/profile_two.jpg';
 import Link from "next/link";
+import { useAllProjectsQuery } from "@/redux/features/all.projects";
 const Home = () => {
 
   const words = [
@@ -39,11 +40,12 @@ const Home = () => {
       className: "font-normal"
     }
   ];
-  const { data : skillData, isLoading } = useSuperUserQuery(null);
+  const { data: skillData, isLoading } = useSuperUserQuery(undefined);
+  const { data: AllProjects } = useAllProjectsQuery(undefined);
+
   if (isLoading) {
     return <ProgressBar mode="indeterminate" style={{ height: '6px' }}></ProgressBar>
   }
-  console.log(skillData);
   return (
     <>
 
@@ -160,7 +162,15 @@ const Home = () => {
                 <h1 className="text-4xl font-bold text-white mb-9">projects</h1>
               </div>
               <Projects data={skillData} />
-              <Link href={``}><ViewMoreBtn /></Link>
+
+              <Link href={``}>
+                <div className="flex justify-center">
+                  <div className="absolute">
+                    <div className="badge absolute badge-lg right-[-10px] top-10 z-50">{AllProjects?.length}</div>
+                    <ViewMoreBtn />
+                  </div>
+                </div>
+              </Link>
             </motion.div>
             <motion.div id="education"
               initial={{ opacity: 0.0, y: 40 }}
