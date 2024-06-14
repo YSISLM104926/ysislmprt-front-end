@@ -53,10 +53,9 @@ const Home = () => {
         {/* Radial gradient for the container to give a faded look */}
         <div className="[mask-image:linear-gradient(to_bottom,white_5%,transparent_20%)] pointer-events-none select-none"></div>
         <div className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-          <span className="relative flex h-3 w-1/2 items-center">
+        <span className="relative flex h-3 w-1/2 items-center">
             <span className="animate-ping absolute z-10 text-white inline-flex h-full w-3 
             rounded-full bg-sky-400 opacity-75">
-
             </span>
             <span className="relative text-sm text-white inline-flex rounded-full h-3 w-3 bg-sky-500">
             </span>
@@ -180,7 +179,7 @@ const Home = () => {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="flex mx-auto flex-col px-4"
+              className="flex mx-auto flex-col px-4 mt-12"
             >
               <div className="flex mt-20">
                 <IconBallpen className="size-10 text-white me-2" />
