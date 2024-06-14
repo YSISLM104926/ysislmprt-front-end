@@ -37,7 +37,7 @@ const AddSkills = () => {
                 img: url,
                 link: data?.link
             }
-            const result = await fetch('http://localhost:5000/superuser/add-skills', {
+            const result = await fetch('https://ys-backend.vercel.app/superuser/add-skills', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

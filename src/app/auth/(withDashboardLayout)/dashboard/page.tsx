@@ -12,7 +12,7 @@ interface skTypes {
 const ShowSkills = () => {
     const router = useRouter();
     const fetchSkills = async () => {
-        const res = await fetch('http://localhost:5000/superuser/admin/skills', {
+        const res = await fetch('https://ys-backend.vercel.app/superuser/admin/skills', {
             next: {
                 revalidate: 5
             }
@@ -32,7 +32,7 @@ const ShowSkills = () => {
         getSkills();
     }, []);
     const handleSkillDelete = async(id : string) => {
-         const res = await fetch(`http://localhost:5000/superuser/delete-skills/${id}`,{
+         const res = await fetch(`https://ys-backend.vercel.app/superuser/delete-skills/${id}`,{
             method : 'DELETE'
          })
          router.push('/auth/superuser/chichinga/dashboard');
