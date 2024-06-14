@@ -77,7 +77,7 @@ const Home = () => {
               className="top-28 left-80 h-[80vh] w-[50vw]"
               fill="blue"
             />
-            <motion.div id="home"
+            <motion.div id="intro"
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -107,6 +107,7 @@ const Home = () => {
               </div>
 
             </motion.div>
+
             <motion.div id="resume"
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -125,6 +126,7 @@ const Home = () => {
               </div>
 
             </motion.div>
+
             <motion.div id="skills"
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -171,6 +173,7 @@ const Home = () => {
                 </div>
               </Link>
             </motion.div>
+
             <motion.div id="education"
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -187,6 +190,7 @@ const Home = () => {
               </div>
               <Beams />
             </motion.div>
+
             <motion.div id="cp"
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -203,6 +207,7 @@ const Home = () => {
               </div>
               <CpProblem />
             </motion.div>
+
             <motion.div id="socials"
               initial={{ opacity: 0.0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
