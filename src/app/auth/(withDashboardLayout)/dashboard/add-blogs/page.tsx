@@ -35,7 +35,7 @@ const AddBlogs = () => {
                 blog_tags: data?.tags,
                 blog_img: url,
             }
-            await fetch('https://ys-backend.vercel.app/superuser/add-blogs', {
+            await fetch('https://ysbackend.vercel.app/superuser/add-blogs', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
