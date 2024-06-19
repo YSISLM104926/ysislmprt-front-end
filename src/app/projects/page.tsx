@@ -19,7 +19,7 @@ const Home = () => {
 
     const fetchData = async (page: number) => {
         try {
-            const response = await fetch(`https://ysbackend.vercel.app/api/data?page=${page}`);
+            const response = await fetch(`http://localhost:5000/api/data?page=${page}`);
             if (response.ok) {
                 const result = await response.json();
                 setData(result.data);
